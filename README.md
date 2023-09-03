@@ -9,6 +9,10 @@ _The game acts both as a tool for those interested in learning ethereum, and as 
 - [Introduction](#introduction)
 - [About](#about)
 - [Challenges](#challenges)
+
+
+## Challenges
+
   - Fallback
   - Fallout
   - Coin Flip
@@ -38,6 +42,3 @@ _The game acts both as a tool for those interested in learning ethereum, and as 
   - Good Samaritan
   - Gatekeeper Three
   - Switch
-
-### Challenges
-
