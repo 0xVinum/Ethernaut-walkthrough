@@ -9,5 +9,35 @@ _The game acts both as a tool for those interested in learning ethereum, and as 
 - [Introduction](#introduction)
 - [About](#about)
 - [Challenges](#challenges)
+  - Fallback
+  - Fallout
+  - Coin Flip
+  - Telephone
+  - Token
+  - Delegation
+  - Force
+  - Vault
+  - King
+  - Re-entrancy
+  - Elevator
+  - Privacy
+  - Gatekeeper One
+  - Gatekeeper Two
+  - Naught Coin
+  - Preservation
+  - Recovery
+  - Magic Number
+  - Alien Code X
+  - Denial
+  - Shop
+  - Dex
+  - Dex Two
+  - Puzzle Wallet
+  - Motorbike
+  - Double Entry Point
+  - Good Samaritan
+  - Gatekeeper Three
+  - Switch
 
 ### Challenges
+
