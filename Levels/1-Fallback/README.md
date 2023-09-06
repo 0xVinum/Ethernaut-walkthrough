@@ -154,5 +154,11 @@ This function is a fallback function that is automatically called when Ether is 
   }
 ```
 ### Exploit
+To exploit the contract, one should follow these steps:
+
+1. Invoke the "contribute" function with a maximum of 0.001 ether.
+2. Dispatch 1 wei to the contract in order to initiate the "receive" function.
+3. Initiate the "withdraw" function to retrieve all ETH held within the contract.
+
 ## Solution
 
