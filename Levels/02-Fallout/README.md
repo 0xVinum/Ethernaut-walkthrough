@@ -149,6 +149,16 @@ import 'openzeppelin-contracts-06/math/SafeMath.sol';
   }
 ```
 #### Summary
+
+The "Fallout" smart contract serves as an example of a basic Ethereum contract for allocating and distributing Ether. It demonstrates the use of the SafeMath library for secure arithmetic operations and showcases the implementation of a custom modifier to manage access control.
+
+While this contract provides essential functionality, it has some unconventional naming and structure issues.
+In summary, this smart contract allows an owner to receive and allocate Ether among multiple addresses. Allocators can increase their allocation by calling the allocate() function, and they can withdraw their allocated Ether using the sendAllocation() function. The owner can collect all the remaining Ether in the contract using collectAllocations(). The contract also provides a way to check the allocated balance of any address. However, there are some issues and unconventional naming in the code (such as the constructor having a different name than "constructor"), which might require attention if this contract is intended for production use.
+
+
+
+
+
 ### Exploit
 
 
