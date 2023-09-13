@@ -121,12 +121,33 @@ import 'openzeppelin-contracts-06/math/SafeMath.sol';
    
 #### Functions
 1. **allocate() Function:** This function allows any address to allocate Ether to the contract. It increases the allocation for the caller's address by the amount of Ether sent with the transaction.
+```
+  function allocate() public payable {
+    allocations[msg.sender] = allocations[msg.sender].add(msg.value);
+  }
+```
 
 2. **sendAllocation(address payable allocator) Function:** This function allows an allocator (address) to withdraw their allocated Ether from the contract. It checks that the allocator has an allocation greater than 0 and then transfers that amount of Ether to the allocator's address.
-
+```
+  function sendAllocation(address payable allocator) public {
+    require(allocations[allocator] > 0);
+    allocator.transfer(allocations[allocator]);
+  }
+```
 3. **collectAllocations() Function:** Only the owner can call this function. It allows the owner to collect all the remaining Ether held by the contract. This can be used to withdraw any remaining funds in the contract to the owner's address.
+```
+  function collectAllocations() public onlyOwner {
+    msg.sender.transfer(address(this).balance);
+  }
+```
 
 4. **allocatorBalance(address allocator):** This function allows anyone to check the balance allocated to a specific allocator (address) in the contract. It returns the amount of Ether allocated to the specified address.
+
+```
+  function allocatorBalance(address allocator) public view returns (uint) {
+    return allocations[allocator];
+  }
+```
 #### Summary
 ### Exploit
 
