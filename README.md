@@ -13,8 +13,8 @@ _The game acts both as a tool for those interested in learning ethereum, and as 
 
 ## Challenges
 
-  - [Fallback](https://github.com/0xVinum/Ethernaut-walkthrough/tree/main/Levels/1-Fallback)
-  - [Fallout](https://github.com/0xVinum/Ethernaut-walkthrough/tree/main/Levels/2-Fallout)
+  - [Fallback](https://github.com/0xVinum/Ethernaut-walkthrough/tree/main/Levels/01-Fallback)
+  - [Fallout](https://github.com/0xVinum/Ethernaut-walkthrough/tree/main/Levels/02-Fallout)
   - Coin Flip
   - Telephone
   - Token
