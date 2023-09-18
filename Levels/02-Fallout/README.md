@@ -160,6 +160,18 @@ In summary, this smart contract allows an owner to receive and allocate Ether am
 
 
 ### Exploit
+Upon inspecting the code, it becomes evident that there is a typographical error present. The contract's name is correctly defined as "Fallout," but the constructor function is mistakenly named "Fal1out," featuring a numerical '1' in place of the intended lowercase 'l'. This typographical oversight results in the failure of the constructor function's execution during contract deployment, rendering the 'owner' variable unaltered. In essence, "Fal1out" is perceived as a regular function rather than a constructor.
 
+The resolution for this challenge is relatively straightforward. We simply need to invoke the "Fal1out" function, which has not been previously executed.
 
 ## Solution
+```
+function exploit() internal override {
+    vm.startPrank(player);
+
+    // invoke the "Fal1out" function
+    level2.Fal1out();
+
+    vm.stopPrank();
+}
+```
